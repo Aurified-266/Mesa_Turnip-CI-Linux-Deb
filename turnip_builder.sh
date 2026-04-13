@@ -281,19 +281,20 @@ port_lib_for_magisk(){
     meta="META-INF/com/google/android"
     mkdir -p "$magiskdir/$meta"
     
-    # Get version from VERSION file
-    version=$(grep -oP '^\d+\.\d+\.\d+' VERSION 2>/dev/null || echo "26.0.0")
+    # FIXED: Hardcode version or detect from source directory
+    cd "$workdir/mesa-mesa-26.0.4"  # Ensure we're in the Mesa source dir
+    version=$(grep -oP '^\d+\.\d+\.\d+' VERSION 2>/dev/null || echo "26.0.4")
     version_code=$(echo "$version" | tr -cd '0-9')
+    cd "$magiskdir"  # Return to Magisk dir
     
-    cat >"$magiskdir/$meta/update-binary" <<EOF
-#!/sbin/sh
-umask 022
-ui_print() { echo "\$1"; }
-OUTFD=\$2
-ZIPFILE=\$3
-. /data/adb/magisk/util_functions.sh
-install_module
-exit 0
+    cat >"$magiskdir/module.prop" <<EOF
+id=turnip
+name=Turnip Vulkan Driver
+version=$version
+versionCode=$version_code
+author=Aurified.Dev
+description=Turnip is an open-source Vulkan driver for Adreno GPUs based on Mesa $version. Debug and GPU Cache Disabled.
+minApi=29
 EOF
 
     cat >"$magiskdir/$meta/updater-script" <<EOF
