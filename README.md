@@ -52,14 +52,11 @@ The final meson setup command that made it all work:
 
 🚀 Conclusion
 
-Pivoted from an original script that failed at the first line in linux-deb due to path spaces, to a robust; automated pipeline that:
-
 Downloads the NDK and Mesa source.
 Patches the source code to remove incompatible features.
 Generates custom stub libraries to fool the linker.
 Builds the Vulkan driver.
 Packages it into a flashable Magisk module.
-This is a significant engineering achievement in the realm of open-source Android graphics drivers! Enjoy your custom Turnip driver. 🎉
 
 #### Magisk build:
 - Root must be visible to target app/game.
