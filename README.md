@@ -55,7 +55,7 @@ The final meson setup command that made it all work:
 
 🚀 Conclusion
 
-pivoted from an original script that failed at the first line in linux-deb due to path spaces, to a robust; automated pipeline that:
+Pivoted from an original script that failed at the first line in linux-deb due to path spaces, to a robust; automated pipeline that:
 
 Downloads the NDK and Mesa source.
 Patches the source code to remove incompatible features.
