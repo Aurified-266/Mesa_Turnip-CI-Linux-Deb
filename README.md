@@ -1,10 +1,10 @@
 ### TLDR;
 
-This is a bash script to build freedreno/turnip for android as a magisk module. Made specifically for compatibilty with linux-deb. Linux-deb users may encounter a host of problems when attemptiong to compile the bash script origionally given by ilhan-athn7 and later forked by k11mch1, this new bash script bypasses issues surrounding header problems, linker issues, and lack of identifying deb /usr prereq install locations.
+This is a bash script to build Turnip for android as a magisk module and adpkg. Made specifically for compatibilty with linux-deb. Linux-deb users may encounter a host of problems when attemptiong to compile the bash script origionally given by ilhan-athn7 and later forked by k11mch1, this new bash script bypasses issues surrounding header problems, linker issues, and lack of identifying deb /usr prereq install locations.
 
 ### Notes;
 
-The script now successfully builds libvulkan_freedreno.so (Mesa 26.0.4) for Android aarch64 on Linux Debian and packages it into a Magisk module, ready for installation on Adreno GPU devices.
+The script now successfully builds vulkan.turnip.so (Mesa 26.0.5) for Android aarch64 on Linux Debian and packages it into a Magisk module and adpkg, ready for installation on Adreno GPU devices.
 
 🔍 Summary of Changes & Fixes
 1. Variable Scope: Fixed a bug where $MESASRC_DIR was used as an absolute path after cding into it, causing double-path errors. Switched to relative paths (src/...) inside the build function.
