@@ -12,11 +12,11 @@ The script now successfully builds libvulkan_freedreno.so (Mesa 26.0.4) for Andr
 Host vs. Target Mismatch: The linker kept trying to link against x86_64 host libraries (/usr/lib/x86_64-linux-gnu/libz.so, libelf.so) instead of the aarch64 NDK libraries.
 Fix: Added sed commands to strip these explicit host paths from the generated build.ninja file.
 Missing libz (Zlib): Disabling zlib caused "undefined symbol" errors (gzopen, deflate, etc.) because parts of the code still called these functions.
-Fix: Created custom C stubs (zlib_stubs.c) that provide empty implementations of all gz* functions. We compiled these into a static library (libz_stub.a) and injected it into the link command right before --end-group to satisfy the linker without needing the real library.
+Fix: Created custom C stubs (zlib_stubs.c) that provide empty implementations of all gz* functions. Compiled these into a static library (libz_stub.a) and injected it into the link command right before --end-group to satisfy the linker without needing the real library.
 Missing libdl: Meson couldn't find libdl in the cross-compile environment.
 Fix: Added -ldl explicitly to the linker arguments, relying on the NDK's libc which provides these symbols on Android.
 3. Feature Disabling for Stability
-To bypass complex dependencies that were impossible to resolve cleanly in a cross-compile environment, we deliberately disabled non-essential features:
+To bypass complex dependencies that were impossible to resolve cleanly in a cross-compile environment, deliberately disabled non-essential features:
 
 -Dshader-cache=disabled: Prevented the build from requiring zlib for shader caching. (Trade-off: Slightly longer initial game load times after reboot, but no runtime stutter).
 -Dzlib=disabled & -Dzstd=disabled: Removed the need for real compression libraries.
@@ -61,6 +61,9 @@ Packages it into a flashable Magisk module.
 #### Magisk build:
 - Root must be visible to target app/game.
 - Tested with these apps/games listed [here](list.md).
+
+#### Emulation adpkg
+- For emulators and other adpkg installs
 
 ### To Build Locally
 - Obtain the script [turnip_builder.sh]
