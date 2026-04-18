@@ -75,6 +75,8 @@ Packages it into a flashable Magisk module.
 ### ToDo: 
 - Resolve complex dependency issues to enable shader cache and shader cache compression
 
+- Update script to include auto building .adpkg file so manual build isn't necessary
+
 ### References
 
 - https://gitlab.freedesktop.org/mesa/mesa/
