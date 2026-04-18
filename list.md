@@ -20,6 +20,6 @@
 | Warframe                                        | ✅     | Tested by [@Aurified.Dev](//github.com/Aurified-266)<br>                                                                    |
 | Eden Emulator                                   | ✅     | Tested by [@Aurified.Dev](//github.com/Aurified-266)<br>                                                                    |
 | Kenji-NX Emulator                               | ✅     | Tested by [@Aurified.Dev](//github.com/Aurified-266)<br>                                                                    |
-| Vita3K                                          | ✅     | Tested by [@Aurified.Dev](//github.com/Aurified-266)<br>                                                                    |
+| Vita3K Emulator                                 | ✅     | Tested by [@Aurified.Dev](//github.com/Aurified-266)<br>                                                                    |
 | Azahar Emulator                                 | ✅     | Tested by [@Aurified.Dev](//github.com/Aurified-266)<br>                                                                    |
 | AM2R (Another Metroid 2 Remake)                 | ✅     | Tested by [@Aurified.Dev](//github.com/Aurified-266)<br>                                                                    |
