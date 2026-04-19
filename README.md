@@ -48,11 +48,15 @@ The script now successfully builds vulkan.turnip.so (Mesa 26.0.X) for Android aa
 - Fix: Created dummy empty files for these targets in the build directory so Ninja would skip the failed link step and proceed.
 
 5. Script Optimization & Cleanup 🔬
-Dynamic NDK Handling: Replaced hardcoded NDK paths with variables ($ndkver, $NDK_TOOLCHAIN) so the script works with different NDK versions (e.g., r27c or r26d).
-Redundancy Removal: Consolidated multiple sed patches into single, robust blocks. Removed failed fallback logic and duplicate commands.
-Magisk Packaging: Streamlined the port_lib_for_magisk function to correctly set permissions, sonames, and generate the update-binary and customize.sh scripts.
+
+- Dynamic NDK Handling: Replaced hardcoded NDK paths with variables ($ndkver, $NDK_TOOLCHAIN) so the script works with different NDK versions (e.g., r27c or r26d).
+
+- Redundancy Removal: Consolidated multiple sed patches into single, robust blocks. Removed failed fallback logic and duplicate commands.
+
+- Magisk Packaging: Streamlined the port_lib_for_magisk function to correctly set permissions, sonames, and generate the update-binary and customize.sh scripts.
 
 6. Version-Agnsotic 🔁
+
 Script now auto populates appropriatly consistent naming convention for output zipped files, and meta/config info based upon the particular version you are building.
 
 📜 The "Magic" Flags Used
