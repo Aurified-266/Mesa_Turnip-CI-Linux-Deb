@@ -22,8 +22,11 @@ Fix: Added -ldl explicitly to the linker arguments, relying on the NDK's libc wh
 To bypass complex dependencies that were impossible to resolve cleanly in a cross-compile environment, deliberately disabled non-essential features:
 
 -Dshader-cache=disabled: Prevented the build from requiring zlib for shader caching. (Trade-off: Slightly longer initial game load times after reboot, but no runtime stutter).
+
 -Dzlib=disabled & -Dzstd=disabled: Removed the need for real compression libraries.
+
 -Dspirv-tools=disabled: Avoided header path conflicts with the system spirv-tools.
+
 -Dgallium-drivers=: Disabled the Gallium API (desktop OpenGL) to focus purely on the Vulkan driver, reducing build size and complexity.
 
 4. Build System Patches
