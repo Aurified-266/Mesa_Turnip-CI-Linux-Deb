@@ -4,7 +4,7 @@ This is a bash script to build Turnip for android as a magisk module and adpkg. 
 
 ### Notes;
 
-The script now successfully builds vulkan.turnip.so (Mesa 26.0.X) for Android aarch64 on Linux Debian and packages it into a Magisk module and adpkg, ready for installation on Adreno GPU devices.
+The script now successfully builds vulkan.turnip.so (Mesa 26.0.X) for Android aarch64 on Linux Debian and packages it into a Magisk module and adpkg, ready for installation on Adreno GPU devices. Developer debug tools disabled. GPU Cache disabled.
 
 🔍 Summary of Changes & Fixes
 
@@ -66,12 +66,12 @@ Auto populates correct meta and other config info based on version.
 Packages it into a flashable Magisk module following consistent naming convention.
 Packages an ADPKG file ready for emulators, or for other Adreno GPU's by other root method access; following consistent naming convention.
 
-#### Magisk build:
+#### Magisk Build:
 - Root must be visible to target app/game.
 - Tested with these apps/games listed [here](list.md).
 
-#### Emulation adpkg
-- For emulators and other adpkg installs
+#### Emulation/Root adpkg
+- For emulators, or other root level adpkg installs - software or firmware
 
 ### To Build Locally
 - Obtain the script [turnip_builder.sh]
