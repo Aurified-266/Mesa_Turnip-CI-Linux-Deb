@@ -62,7 +62,9 @@ Downloads the NDK and Mesa source.
 Patches the source code to remove incompatible features.
 Generates custom stub libraries to fool the linker.
 Builds the Vulkan driver.
-Packages it into a flashable Magisk module.
+Auto populates correct meta and other config info based on version.
+Packages it into a flashable Magisk module following consistent naming convention.
+Packages an ADPKG file ready for emulators, or for other Adreno GPU's by other root method access; following consistent naming convention.
 
 #### Magisk build:
 - Root must be visible to target app/game.
