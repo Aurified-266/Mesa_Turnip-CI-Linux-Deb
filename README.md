@@ -4,7 +4,7 @@ This is a bash script to build *Vulkan Only* Turnip Drivers for android as a mag
 
 ### Notes;
 
-The script now successfully builds vulkan.turnip.so (Mesa 26.0.X) for Android aarch64 on Linux Debian; and packages it into a Magisk module and adpkg, ready for installation on Adreno GPU devices. *Developer debug tools disabled. GPU Cache disabled.*
+The script now successfully builds *vulkan.turnip.so (Mesa 26.0.X)* for Android aarch64 on Linux Debian; and packages it into a Magisk module and adpkg, ready for installation on Adreno GPU devices. *Developer debug tools disabled. GPU Cache disabled.*
 
 ### 🔍 Summary of Changes & Fixes
 
@@ -100,13 +100,13 @@ Packages an ADPKG file ready for emulators, or for other Adreno GPU's by other r
 - script will require >= 3.3gb of space for work_dir - depending on settings - work_dir can be deleted after exported zips are moved out of work_dir and installed
 
 ### ToDo: 
-| Planned | Completed |
+| Planned | Completed | Purpose |
 | :---    | :---      |
-| - Update script so that a readable, reasonable, consistent file naming convention is used | ✅ |
-| - Update script to include the auto population of approriate meta and config info to be auto zipped | ✅ |
-| - Update script to include auto building .adpkg file so manual build isn't necessary (auto zip - contents only! - of both build folders -Magisk/ADPKG) | ✅ |
-| - Update script to make version-agnostic; functioning regardless of mesarc version pulled and making inclusive of all version folder paths used by differently named archives and builds | ✅ |
-| - (*Toggle Option to*)Bump Vulkan to v1.4 | Next |
+| - Update script so that a readable, reasonable, consistent file naming convention is used | ✅ | Scipt stability feature |
+| - Update script to include the auto population of approriate meta and config info to be auto zipped | ✅ | Scipt meta convention consistency feature |
+| - Update script to include auto building .adpkg file so manual build isn't necessary (auto zip - contents only! - of both build folders -Magisk/ADPKG) | ✅ | Script ease of access feature |
+| - Update script to make version-agnostic; functioning regardless of mesarc version pulled and making inclusive of all version folder paths used by differently named archives and builds | ✅ | Script compatibility feature |
+| - Bump Vulkan to v1.4 | Auto | Will auto populate in reporting programs when Vulkan 1.4 is standardized - ie. Vendors update their Vulkan loader & System Libraries to offer official support |
 | - Resolve complex dependency issues to enable shader cache and shader cache compression | Next |
 
 ### References
