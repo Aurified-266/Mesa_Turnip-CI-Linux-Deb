@@ -328,7 +328,7 @@ name=💰Aurified.Turnip GA$version Vulkan Driver
 version=GA$version
 versionCode=$version_code
 author=Aurified.Dev
-description=💰Aurified.Turnip is an open-source Vulkan driver for Adreno GPUs based on Mesa $version. Debug and GPU Cache Disabled.
+description=💰Aurified.Turnip is a Stable open-source Vulkan driver for Adreno GPUs based on Mesa $version. Debug and GPU Cache Disabled.
 minApi=29
 EOF
 
