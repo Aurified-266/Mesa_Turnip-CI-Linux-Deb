@@ -1,6 +1,8 @@
 ### TLDR;
 
-This is a bash script to build *Vulkan Only* Turnip Drivers for android as a magisk module and adpkg. Made specifically for compatibilty with Linux-Debian architecture. Linux-Deb users may have encountered a host of problems when attempting to compile the bash script originally given by ilhan-athn7 and later forked by k11mch1; this new bash script fixes issues caused by lack of *implicit* and *explicit* dependencies, lack of explicit work environment definition, and amends missing non-linux "*native*" host-lib-functions.
+This is a bash script to build *Vulkan Only* Turnip Drivers for android as a magisk module and adpkg. Made specifically for compatibilty with Linux-Debian architecture. Linux-Deb users may have encountered a host of problems when attempting to compile the bash script originally given by ilhan-athn7 and later forked by k11mch1; this new bash script fixes issues caused by lack of *implicit* and *explicit* dependencies, lack of explicit work environment definition, and amends missing non-linux "*native*" host-lib-functions. 
+
+When switching drivers - if experiencing crashes - clear driver shader cache(s)
 
 ### Notes;
 
