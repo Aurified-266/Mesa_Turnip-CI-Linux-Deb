@@ -322,11 +322,11 @@ port_lib_for_magisk(){
     
     cat >"$magiskdir/module.prop" <<EOF
 id=turnip
-name=Aurified.Turnip GA$version Vulkan Driver
+name=💰Aurified.Turnip GA$version Vulkan Driver
 version=GA$version
 versionCode=$version_code
 author=Aurified.Dev
-description=Aurified.Turnip is an open-source Vulkan driver for Adreno GPUs based on Mesa $version. Debug and GPU Cache Disabled.
+description=💰Aurified.Turnip is an open-source Vulkan driver for Adreno GPUs based on Mesa $version. Debug and GPU Cache Disabled.
 minApi=29
 EOF
 
@@ -421,7 +421,7 @@ create_backup_package(){
     cat > "$backup_folder/meta.json" <<EOF
 {
   "schemaVersion": 1,
-  "name": "Aurified.Turnip_GA${version}",
+  "name": "💰Aurified.Turnip_GA${version}",
   "description": "GA${version} - Stable Vulkan driver built from mesa repo; Debug and GPU cache disabled",
   "author": "Aurified.Dev",
   "packageVersion": "GA${version}",
