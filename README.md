@@ -41,7 +41,7 @@ The script now successfully builds *vulkan.turnip.so (Mesa 26.X.X)* for Android 
 
 - libfreedreno_drm Error: The perfcntrs/meson.build file referenced a variable that only exists when Gallium is enabled.
  
-- Fix: Added a sed command to comment out line 40 of src/freedreno/perfcntrs/meson.build before running Meson.
+- Fix: Added a sed command to pattern match comment out whichever lines of src/freedreno/perfcntrs/meson.build that exist causing failure - *before running Meson* - by searching for the libfreedreeno_drm string.
  
 - Test Tool Failures: Debug tools like ir3_disasm and fd5_layout failed to link due to the host library issues.
  
