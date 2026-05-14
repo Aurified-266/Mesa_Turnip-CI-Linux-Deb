@@ -6,7 +6,7 @@ When switching drivers - if experiencing crashes - clear driver shader cache(s)
 
 ### Notes;
 
-The script now successfully builds *vulkan.turnip.so (Mesa 26.X.X)* for Android aarch64 on Linux Debian; and packages it into a Magisk module and adpkg, ready for installation on Adreno GPU devices. *Developer debug tools disabled. GPU Cache disabled.*
+The script now successfully builds *vulkan.turnip.so (Mesa 26.X.X)* for Android aarch64 on Linux Debian; and packages it into a Magisk module and adpkg, ready for installation on Adreno GPU devices. *Developer debug tools disabled.*
 
 ### 🔍 Summary of Changes & Fixes
 
@@ -30,9 +30,9 @@ The script now successfully builds *vulkan.turnip.so (Mesa 26.X.X)* for Android 
 
 - To bypass complex dependencies that are impossible to resolve cleanly in a cross-compile environment, deliberately disabled non-essential features:
 
--Dshader-cache=disabled: Prevented the build from requiring zlib for shader caching. (Trade-off: Slightly longer initial game load times after reboot, but no runtime stutter).
+-Dshader-cache=disabled: Prevented the build from requiring zlib for shader caching. (Trade-off: Slightly longer initial game load times after reboot, but no runtime stutter). / *Re-enabled*
 
--Dzlib=disabled & -Dzstd=disabled: Removed the need for real compression libraries.
+-Dzlib=disabled & -Dzstd=disabled: Removed the need for real compression libraries. *Re-enabled*
 
 -Dspirv-tools=disabled: Avoided header path conflicts with the system spirv-tools.
 
@@ -43,7 +43,7 @@ The script now successfully builds *vulkan.turnip.so (Mesa 26.X.X)* for Android 
 
 - libfreedreno_drm Error: The perfcntrs/meson.build file referenced a variable that only exists when Gallium is enabled.
  
-- Fix: Added a sed command to pattern match comment out whichever lines of src/freedreno/perfcntrs/meson.build that exist causing failure - *before running Meson* - by searching for the libfreedreeno_drm string.
+- Fix: Added a sed command to pattern match comment out whichever lines of src/freedreno/perfcntrs/meson.build that exist causing failure - *before running Meson* - by searching for the libfreedreeno_drm string. / Now more reliably patched with string matching removal.
  
 - Test Tool Failures: Debug tools like ir3_disasm and fd5_layout failed to link due to the host library issues.
  
@@ -72,10 +72,10 @@ The final meson setup command that made it all work:
 -Dvulkan-drivers=freedreno \
 -Dvulkan-beta=true \
 -Dfreedreno-kmds=kgsl \
--Dzstd=disabled \
+-Dzstd=disabled \ *Re-enabled*
 -Dspirv-tools=disabled \
 -Dzlib=disabled \
--Dshader-cache=disabled \
+-Dshader-cache=disabled \ *Re-enabled*
 -Dc_link_args="-L$workdir/stub_libs -lz_stub -ldl"
 
 ### 🚀 Conclusion
