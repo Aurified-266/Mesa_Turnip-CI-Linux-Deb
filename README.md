@@ -32,7 +32,7 @@ The script now successfully builds *vulkan.turnip.so (Mesa 26.X.X)* for Android 
 
 -Dshader-cache=disabled: Prevented the build from requiring zlib for shader caching. (Trade-off: Slightly longer initial game load times after reboot, but no runtime stutter).
 
--Dzlib=disabled & -Dzstd=disabled: Removed the need for real compression libraries. * zstd Re-enabled*
+-Dzlib=disabled & -Dzstd=disabled: Removed the need for real compression libraries. *zstd Re-enabled*
 
 -Dspirv-tools=disabled: Avoided header path conflicts with the system spirv-tools.
 
