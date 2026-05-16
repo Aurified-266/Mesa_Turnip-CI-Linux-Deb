@@ -1,3 +1,11 @@
+>## Mesa-Turnip Continued Integration / Continued Development
+>### Android Graphics Driver Build Script /Repo for - Linux-Debian
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![Platform](https://img.shields.io/badge/Platform-Android%2013%2B-green.svg)
+![Device](https://img.shields.io/badge/Device-Retroid%20Pocket%205-orange.svg)
+![Status](https://img.shields.io/badge/Status-Stable-success.svg)
+
 ### TLDR;
 
 This is a bash script to build *Vulkan Only* Turnip Drivers for android as a magisk module and adpkg. Made specifically for compatibilty with Linux-Debian architecture. Linux-Deb users may have encountered a host of problems when attempting to compile the bash script originally given by ilhan-athn7 and later forked by k11mch1; this new bash script fixes issues caused by lack of *implicit* and *explicit* dependencies, lack of explicit work environment definition, and amends missing non-linux "*native*" host-lib-functions. 
