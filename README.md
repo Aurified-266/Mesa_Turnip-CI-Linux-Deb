@@ -1,4 +1,4 @@
-# 🛠️Mesa-Turnip Continued Integration / Continued Development
+# 🛠️ Mesa-Turnip Continued Integration / Continued Development
 >## *Turnip Graphics Driver Build Script / Build Repo for - `Linux-Debian and Android`*
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -65,7 +65,7 @@ The script now successfully builds *vulkan.turnip.so (Mesa 26.X.X)* for Android 
 
 - Magisk Packaging: Streamlined the port_lib_for_magisk function to correctly set permissions, sonames, and generate the update-binary and customize.sh scripts.
 
-#### 6. Version-Agnostic / Meta Info🔁
+#### 6. Version-Agnostic / Meta Info 🔁
 
 - Script now functions correctly regardless of pulled version / auto populates appropriately consistent naming convention for output zipped files, and meta/config info based upon the particular build.
 
